@@ -59,8 +59,7 @@ const App = () => {
   const [anecdoteIndex, setAnecdoteIndex] = useState(0);
   
 
-  //fixattava vielä
-  const [votes, setVotes] = useState([0, 0, 0, 0, 0, 0]);
+  const [votes, setVotes] = useState(new Array(anecdotes.length).fill(0));
   const copy = [...votes];
   
   const updateVotes = () => {
