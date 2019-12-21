@@ -1,0 +1,7 @@
+0.6: Single Page App -muistiinpano
+
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+kommentti: selain lähettää JSON-muodossa uuden muistiinpanon(sisältö + aikaleima)
+tapahtumankäsittelijän avulla ja piirtää notet uudelleen
+
+palvelin->selain: JSON-response - {"message":"note created"}

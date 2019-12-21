@@ -1,0 +1,20 @@
+0.4: uusi muistiinpano
+
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+kommentti: formin tiedot eli käyttäjän kirjottamana teksti lähetetään palvelimelle
+/new_note endpointiin ja muistiinpano tallentuu palvelimelle taulukkoon notes
+palvelin->selain: Status code 302 Found.
+kommentti: url redirectaus /notes
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+palvelin->selain: HTML-koodi
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+palvelin->selain: main.css
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+palvelin->selain: main.js
+
+JavaScript-koodin suorittaminen saa aikaan JSON-datan pyytämisen palvelimelta
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+palvelin->selain: JSON-data
+
+kommentti: selain suorittaa tapahtumankäsittelijän ja renderöi muistiinpanot data.jsonin 
